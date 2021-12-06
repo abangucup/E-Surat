@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Surat;
 use Illuminate\Http\Request;
 
 class DosenController extends Controller
@@ -13,7 +14,8 @@ class DosenController extends Controller
      */
     public function index()
     {
-        return 'Anda Dosen';
+        $suratkeluar = Surat::get()->where('user_id', 2)->count();
+        return view('home', compact(['suratkeluar']));
     }
 
     /**

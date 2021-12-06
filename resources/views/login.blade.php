@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>Login Admin</title>
-    @include('layouts.styles')
+    <title>Login E-Surat</title>
+    @include('layouts.templates.styles')
 </head>
 
 <body>
@@ -18,7 +18,7 @@
                         <div class="col-lg-5">
                             <div class="card shadow-lg border-0 rounded-lg mt-5">
                                 <div class="card-header">
-                                    <h3 class="text-center font-weight-light my-4">Login</h3>
+                                    <h3 class="text-center font-weight-light my-4">Sistem Informasi E-SURAT</h3>
                                 </div>
                                 <div class="card-body">
                                     @if (session('status'))
@@ -57,7 +57,7 @@
         </div>
     </div>
 
-    @include('layouts.scripts')
+    @include('layouts.templates.scripts')
 </body>
 
 </html>

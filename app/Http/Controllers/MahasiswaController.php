@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Middleware\CheckRole;
+use App\Models\Role;
+use App\Models\Surat;
 use Illuminate\Http\Request;
 
 class MahasiswaController extends Controller
@@ -13,7 +16,8 @@ class MahasiswaController extends Controller
      */
     public function index()
     {
-        return 'Anda Mahasiswa';
+        $suratkeluar = Surat::get()->where('user_id', 3)->count();
+        return view('home', compact(['suratkeluar']));
     }
 
     /**
