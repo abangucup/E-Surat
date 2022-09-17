@@ -13,19 +13,6 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        $this->call([
-            RoleSeeder::class,
-            UserSeeder::class,
-            SuratSeeder::class,
-            JenisSeeder::class,
-        ]);
         // \App\Models\User::factory(10)->create();
-        // User::create([
-        //     'identitas' => Str::random('5'),
-        //     'name' => 'PPA (Admin)',
-        //     'telp' => '08xxxxxx',
-        //     'email' => 'admin@gmail.com',
-        //     'password' => Hash::make('password'),
-        // ]);
     }
 }
